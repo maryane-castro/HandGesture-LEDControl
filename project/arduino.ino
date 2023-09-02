@@ -1,7 +1,10 @@
+//variaveis
 int led1 = 2;
 int led2 = 3;
 int led3 = 4;
 
+
+//ligando variaveis e porta serial
 void setup() {
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
@@ -9,6 +12,8 @@ void setup() {
   Serial.begin(9600);
 }
 
+
+//
 void loop() {
   if (Serial.available() > 0) {
     char command = Serial.read();
